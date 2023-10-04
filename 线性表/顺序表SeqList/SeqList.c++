@@ -7,13 +7,13 @@ typedef struct{
     int length;
     int lengthSize;
 }SeqList;
-//初始化
+//初始化顺序表
 void InitList(SeqList &L){
     L.Data=(ElemType *)malloc(sizeof(ElemType) * N);
     L.length=0;
     L.lengthSize=N;
 }
-//赋予值
+//顺序表赋值
 void ChuList(SeqList &L){
     
     for(int i=0;i<L.lengthSize;i++){
@@ -30,13 +30,13 @@ void ChuList(SeqList &L){
         L.length=L.lengthSize;
     }
 }
-//插入函数
+//插入
 int insert(ElemType e,int index,SeqList &L){
     if(index<1||index>L.length)
     {
         return 0;
     }
-    if(L.length>=L.lengthSize)//空间不足
+    if(L.length>=L.lengthSize)//?????
     {
        ElemType *pNew=(ElemType *)malloc(sizeof(ElemType)*2*L.lengthSize);
        for(int i=0;i<L.length;i++){
@@ -55,7 +55,7 @@ int insert(ElemType e,int index,SeqList &L){
 }
 //输出函数
 void print(SeqList L){
-    printf("顺序表长: %d,表最大长为: %d。表如下: ",L.length,L.lengthSize);
+    printf("顺序表长: %d,最大长为: %d表为: ",L.length,L.lengthSize);
     for(int i=0;i<L.length;i++){
         printf("%d ",L.Data[i]);
     }
@@ -71,7 +71,7 @@ int main(){
         printf("插入成功\n");
     else
     {
-        printf("插入失败，下标越界\n");
+        printf("插入失败下标越界\n");
     }
     print(L);
     return 0;
