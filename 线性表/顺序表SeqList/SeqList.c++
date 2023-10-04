@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<malloc.h>
 #include <iostream>
-#include<SeqList.h>
+//#include<SeqList.h>
 typedef  int ElemType;
 #define N 10
 typedef struct{
