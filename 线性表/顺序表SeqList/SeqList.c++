@@ -54,6 +54,16 @@ int insert(ElemType e,int index,SeqList &L){
     L.length+=1;
     return 1;
 }
+//删除函数
+int Delete(int index,SeqList &L,ElemType e){
+    if(index<1||index>L.length)
+    return 0;
+    for(int i=index;i<L.length;i++){
+            L.Data[i-1]=L.Data[i];
+    }
+    --L.length;
+    return 1;
+}
 //输出函数
 void print(SeqList L){
     printf("顺序表长: %d,最大长为: %d表为: ",L.length,L.lengthSize);
@@ -74,6 +84,8 @@ int main(){
     {
         printf("插入失败下标越界\n");
     }
+    print(L);
+    int o=Delete(6,L,23);
     print(L);
     return 0;
 }
