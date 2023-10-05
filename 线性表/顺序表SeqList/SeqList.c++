@@ -38,7 +38,7 @@ int insert(ElemType e,int index,SeqList &L){
     {
         return 0;
     }
-    if(L.length>=L.lengthSize)//?????
+    if(L.length>=L.lengthSize)//空间不足，增加空间
     {
        ElemType *pNew=(ElemType *)malloc(sizeof(ElemType)*2*L.lengthSize);
        for(int i=0;i<L.length;i++){
