@@ -1,12 +1,11 @@
 #include "seqlist.h"
 #include<malloc.h>
 //删除最小元素并且将最后一个元素放置与删除位置。
-void minz(SeqList &L){
-    int Min=L.Data[0],temp=0;
-    for(int i=0;i<L.length;i++){
-        if(Min>L.Data[i])
+void DeteleMin(SeqList &L){
+    int temp=0;
+    for(int i=1;i<L.length;i++){
+        if(L.Data[temp]>L.Data[i])
         {
-            Min=L.Data[i];
             temp=i;
         }    
     }
@@ -19,7 +18,11 @@ int main(){
     InitList(L);
     ChuList(L);
     print(L);
-    minz(L);
+    //测试当最小值为最后一个元素时
+    //int o=L.Data[0];
+    //L.Data[0]=L.Data[9];
+    //L.Data[9]=o;
+    DeteleMin(L);
     print(L);
 
 }
