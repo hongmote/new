@@ -2,6 +2,7 @@
 #define SEQLIST_H
 #include<stdio.h>
 #include<malloc.h>
+#include<algorithm>
 #include <iostream>
 //#include<SeqList.h>
 typedef  int ElemType;
