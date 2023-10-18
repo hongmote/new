@@ -15,7 +15,7 @@ void DeteleMin(SeqList &L){
 }
 int main(){
     SeqList L;
-    InitList(L);
+    InitList(L,10);
     ChuList(L);
     print(L);
     //测试当最小值为最后一个元素时

@@ -41,7 +41,7 @@ void deleteElem3(SeqList &L){
 
 int main(){
     SeqList L;
-    InitList(L);
+    InitList(L,10);
     ChuList(L);
      printf("Ô­ÐòÁÐÎª:\n");
           print(L);

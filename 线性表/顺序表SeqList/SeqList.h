@@ -13,10 +13,10 @@ typedef struct{
     int lengthSize;
 }SeqList;
 //初始化顺序表
-void InitList(SeqList &L){
-    L.Data=(ElemType *)malloc(sizeof(ElemType) * N);
+void InitList(SeqList &L,int length){
+    L.Data=(ElemType *)malloc(sizeof(ElemType) * length);
     L.length=0;
-    L.lengthSize=N;
+    L.lengthSize=length;
 }
 //顺序表赋值
 void ChuList(SeqList &L){
